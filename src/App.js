@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 
-class App extends Component {
-	handleOnClick = event => {
+class App extends Component 
+{
+	handleOnClick = event => 
+	{
 		this.props.increaseCount();
 	};
 
-	render() {
+	render() 
+	{
 		return (
 			<div className="App">
 				<button onClick={this.handleOnClick}>Click</button>
@@ -17,13 +20,15 @@ class App extends Component {
 	}
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => 
+{
 	return {
 		items: state.items
 	};
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => 
+{
 	return {
 		increaseCount: () => dispatch({ type: 'INCREASE_COUNT' })
 	};
